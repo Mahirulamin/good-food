@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Food Resturent</title>
+</head>
+<style>
+    /* 
+    Global Styles 
+    
+    */
+    
+    body, h1, h2, h3, h4, h5, p {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    /* 
+    Banner Section
+    
+    */
+
+    .banner {
+        height: 700px;
+        width: 100%;
+        background-image: url(/IMG/banar.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        /* Center content */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner .info {
+        width: 65%;
+        margin: 0 auto;
+        color: white; 
+        text-align: center;
+    }
+
+    .banner h4 {
+        font-weight: 600;
+        font-size: 32px;
+    }
+
+    .banner h1 {
+        padding-top: 16px;
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .banner p {
+        padding: 24px 0 32px 0;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+    }
+
+    .banner button {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        background-color: rgb(21, 206, 21);
+        padding: 21px 32px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* 
+    About Section
+    
+    */
+
+    .abcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        align-items: center; /* Center content vertically */
+        padding: 60px 30px; 
+        gap: 30px; 
+        color: #101010; 
+    }
+    
+    
+    .abcontainer .img img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .abcontainer .content {
+        text-align: center;
+    }
+
+    .abcontainer .abh5 {
+        margin-bottom: 24px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+        color: #101010;
+    }
+
+    .abcontainer .abP1 {
+        margin-bottom: 48px;
+        height: auto; 
+        opacity: 60%;
+        font-weight: 500;
+        font-size: 24px;
+        color: #101010;
+    }
+
+    .abcontainer .abP2 {
+        padding: 30px 10px;
+        margin-top: 30px;
+        margin-bottom: 32px;
+        font-size: 32px;
+        font-weight: 600;
+        opacity: 70%;
+        text-align: center;
+        color: #101010;
+    }
+
+    .abcontainer .png2 img {
+        width: auto;
+    }
+
+
+    /* =
+    Card Box Section 
+    
+    */
+
+    .parants { 
+        text-align: center;
+        margin: auto;
+        padding: 80px 30px; 
+        color: #101010; 
+    }
+
+    .parants h2 {
+        width: auto;
+        height: auto; 
+        opacity: 60%;
+        font-weight: 500;
+        font-size: 24px;
+        text-align: center;
+        color: #101010;
+    }
+
+    .parants h3 {
+        text-align: center;
+        margin-top: 16px;
+        font-weight: 700;
+        font-size: 64px;
+        color: #101010;
+    }
+
+    .parants .cards {
+        margin-top: 48px;
+        width: 100%; 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        text-align: center;
+        gap: 24px; 
+    }
+
+    .parants .cards img {
+        width: 100%;
+        height: 262.71px;
+        object-fit: cover; 
+        border-radius: 16px;
+        margin-bottom: 32px;
+    }
+
+    /* containers 1 and 2 margins removed, replaced by gap on .cards */
+
+    .parants .cards h4 {
+        font-weight: 600;
+        font-size: 40px;
+        margin: 0;
+        color: #101010;
+    }
+
+    .parants .cards p {
+        opacity: 70%;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+        margin-top: 24px;
+        padding: 0; 
+        color: #101010;
+    }
+
+    .parants .cards button {
+        font-size: 24px;
+        font-weight: 600;
+        width: auto;
+        height: 56px;
+        padding: 14px 32px;
+        border-radius: 8px;
+        background-color: #52C30326;
+        border: none;
+        margin-bottom: 24px;
+        color: #333; 
+        cursor: pointer;
+    }
+
+    .parants .lastbutton {
+        font-size: 20px;
+        color: #ffffff;
+        background-color: #52C303;
+        padding: 21px 32px;
+        border-radius: 8px;
+        border: none;
+        width: auto; 
+        height: 65px;
+        text-align: center;
+        margin: 64px 0px 0px 0px;
+        cursor: pointer;
+    }
+
+    /* 
+    Card Section 
+    */
+
+    .single-card-section {
+        text-align: center;
+        padding: 80px 0;
+        color: #101010; 
+    }
+
+    .single-card-section img {
+        border-radius: 16px;
+        width: 424px; 
+        height: 283px; 
+        margin: 0 auto; 
+        display: block;
+        object-fit: cover;
+    }
+
+    .single-card-section .button1 {
+        padding: 14px 32px;
+        font-size: 24px;
+        font-weight: 600;
+        background-color: #52C30326;
+        border: none;
+        border-radius: 8px;
+        margin: 32px auto 24px auto;
+        color: #333; 
+        cursor: pointer;
+    }
+
+    .single-card-section h4 {
+        font-size: 40px;
+        font-weight: 600;
+        width: auto; 
+        height: auto;
+        margin: 0 auto;
+        color: #101010;
+    }
+
+    .single-card-section p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        opacity: 70%;
+        width: 424px;
+        height: auto; 
+        margin: 24px auto 64px auto;
+        padding: 0; 
+        color: #101010;
+    }
+
+    .single-card-section .button2 {
+        font-size: 20px;
+        color: #ffffff;
+        background-color: #52C303;
+        padding: 21px 32px;
+        border-radius: 8px;
+        border: none;
+        margin-bottom: 0; 
+        cursor: pointer;
+    }
+
+    /* 
+    Social Section
+    */
+
+    .social-section {
+        background-image: url(/2n/Assets2/image\ 2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; 
+        text-align: center;
+        padding: 100px 30px; 
+        color: #101010; 
+    }
+
+    .social-section h1 {
+        width: auto; 
+        height: auto;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+        color: #101010;
+        max-width: 805px; 
+        margin: 0 auto; 
+    }
+
+    .social-section p {
+        font-weight: 500;
+        font-size: 24px;
+        width: auto; 
+        height: auto;
+        opacity: 0.6;
+        color: #101010;
+        max-width: 556px; 
+        margin: 24px auto 32px auto; 
+        padding: 0;
+    }
+
+    .social-section h4 {
+        width: auto; 
+        height: auto;
+        opacity: 70%;
+        font-size: 32px;
+        font-weight: 600;
+        color: #101010;
+        margin: 0 auto 24px auto; 
+    }
+
+    .social-section .pic {
+        width: 260.23px;
+        height: 40px;
+    }
+
+</style>
+<body>
+    <main>
+        <!-- banner section -->
+        <div class="container">
+            <div class="banner">
+                <div class="info">
+                    <h4>Savor the Flavors</h4>
+                    <h1>Experience Culinary Excellence Food Experience</h1>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply rand om text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock</p>
+                    <button>Shop The Hotest Food</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- about section -->
+        <div class="abcontainer">
+            <div class="img">
+                <img src="/IMG/abpic.png" alt="Food Image">
+            </div>
+            <div class="content">
+                <h5 class="abh5">We always make sure to provide you with good food</h5>
+                <p class="abP1">Don’t miss a thing! Subscribe to our newsletter</p>
+                <p class="abP2">Follow Us On</p>
+                <div class="png2">
+                    <img src="/IMG/Frame 20.png" alt="Social Icons">
+                </div>
+            </div>
+        </div>
+        
+        <!-- card box section -->
+        <div class="parants">
+            <h2>Favorite Brands</h2>
+            <h3>Your Favorite Brands Food Are Now On Sale</h3>
+            
+            <div class="cards">
+                <div class="container1">
+                    <img src="/IMG/1.jpg" alt="Pizza Burg">
+                    <button>Pizza Burg</button>
+                    <h4>Up To 50% Off</h4>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                </div>
+                <div class="container2">
+                    <img src="/IMG/2.jpg" alt="Kacchi Bhai">
+                    <button>Kacchi Bhai</button>
+                    <h4>Up To 50% Off</h4>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                </div>
+                <div class="container3">
+                    <img src="/IMG/3.jpg" alt="Burger King">
+                    <button>Burger King</button>
+                    <h4>Up To 50% Off</h4>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                </div>
+            </div>
+            <button class="lastbutton">Watch All Sells</button>
+        </div>
+
+        <!-- single card section -->
+        <div class="single-card-section">
+            <img src="/IMG/Rectangle 1.jpg" alt="Pizza Sale">
+            <button class="button1">Pizza Burg</button>
+            <h4>Up To 50% Off</h4>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+            <button class="button2">Watch All Sells</button>
+        </div>
+
+        <!-- social section -->
+        <div class="social-section">
+            <h1>We always make sure to provide you with good food</h1>
+            <p>Don’t miss a thing! Subscribe to our newsletter</p>
+            <h4>Follow Us On</h4>
+            <img class="pic" src="/2n/Assets2/Frame 20.png" alt="Social Icons">
+        </div>
+    </main>
+</body>
+</html>
